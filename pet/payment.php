@@ -17,11 +17,9 @@ if($_SESSION['ID']=='')
 
 include "dbconnect.php";
 $ID=$_SESSION['ID'];
+
 $query = "SELECT PRICE, SPECIES FROM BASKET WHERE MEMBER_NUM = (SELECT MEMBER_NUM FROM MEMBER WHERE ID ='$ID')";
 $result = mysqli_query($con, $query);
-
-$query10 = "SELECT PRICE, SPECIES FROM PURCHASE WHERE MEMBER_NUM = (SELECT MEMBER_NUM FROM MEMBER WHERE ID ='$ID')";
-$result10 = mysqli_query($con, $query10);
 ?>
 
 <body>
@@ -71,7 +69,6 @@ $result10 = mysqli_query($con, $query10);
         <td align="center"><a href="pet_search.php"><img src="image/pet_search.png" width="212" height="60" border="0"/></a></td>
         <td align="center"><a href="inbasket.php"><img src="image/inbasket.png" width="212" height="60" border="0"/></a></td>
         <td align="center"><img src="image/payment_c.png" width="212" height="60" border="0"/></a></td>
-<!--        <td colspan="2" align="center"><a href="del_sugang.php"><img src="image/del_sugang_c.png" width="212" height="60" border="0"/></a></td>-->
     </tr>
     <tr>
         <td height="3195" colspan="6" align="center" valign="top">
@@ -82,47 +79,20 @@ $result10 = mysqli_query($con, $query10);
                         <td width="60" align="center">가격</td>
                     </tr>
                         <br>
-                        <?php
-                        $query5 = "SELECT * FROM BASKET";
-                        $result5 = mysqli_query($con, $query5);
-                        $row5 = mysqli_fetch_array($result5);
-
-                        $query50 = "SELECT * FROM PURCHASE";
-                        $result50 = mysqli_query($con, $query50);
-                        $row50 = mysqli_fetch_array($result50);
-
-                        if ($row5[0] == '')
-                        {
-                            while($row = mysqli_fetch_array($result))
-                            {
-                                $row1 = mysqli_fetch_array($result1);
-                                $row2 = mysqli_fetch_array($result2);
-                                echo "<tr bordercolor=\"#999999\">";
-                                echo "<td align='center'> $row[1]</td>";
-                                echo "<td align='center'> $row[0] </td>";
-                                $total += $row[0];
-                                echo "</tr>";
-                            }
-                            echo "<td align='center' > 총결제금액 </td>";
-                            echo "<td align='center'> $total </td>";
-                        }
-                        else if ($row50[0] == '')
-                        {
-                            while($row = mysqli_fetch_array($result))
-                            {
-                                $row1 = mysqli_fetch_array($result1);
-                                $row2 = mysqli_fetch_array($result2);
-                                echo "<tr bordercolor=\"#999999\">";
-                                echo "<td align='center'> $row[1]</td>";
-                                echo "<td align='center'> $row[0] </td>";
-                                $total += $row[0];
-                                echo "</tr>";
-                            }
-                            echo "<td align='center' > 총결제금액 </td>";
-                            echo "<td align='center'> $total </td>";
-                        }
-
-                        ?>
+                    <?php
+                    while($row = mysqli_fetch_array($result))
+                    {
+                        $row1 = mysqli_fetch_array($result1);
+                        $row2 = mysqli_fetch_array($result2);
+                        echo "<tr bordercolor=\"#999999\">";
+                        echo "<td align='center'> $row[1] </td>";
+                        echo "<td align='center'> $row[0] </td>";
+                        echo "</tr>";
+                        $total += $row[0];
+                    }
+                    echo "<td align='center'> 총결제금액 </td>";
+                    echo "<td align='center'> $total </td>";
+                    ?>
                 </table>
                 <table>
                     <tr>

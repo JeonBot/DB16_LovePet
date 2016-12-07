@@ -24,8 +24,6 @@
       <td height="60" align="center"><a href="mypage.php"><img src="image/mem_info.png" width="212" height="60" border="0"/></a></td>
       <td align="center"><a href="pet_search.php"><img src="image/pet_search.png" width="212" height="60" border="0"/></a></td>
       <td align="center"><a href="inbasket.php"><img src="image/now_select.png" width="212" height="60" border="0"/></a></td>
-<!--      <td align="center"><img src="image/payment.png" width="212" height="60" border="0"/></a></td>-->
-<!--    <td colspan="2" align="center"><a href="del_sugang.php"><img src="image/del_select.png" width="212" height="60" border="0"/></a></td>-->
     </tr>
     <tr>
       <td height="3195" colspan="6" align="center" valign="top">
@@ -39,7 +37,7 @@
           <td width="121" height="55">
           <input type="text" name="input_id" id="input_id" size="12" height="20" required />
           <br>
-          <input type="password" name="input_pw" id="input_pw" size="12"height="50" required />
+          <input type="password" name="input_pw" id="input_pw" size="12"height="20" required />
           </td>
           <td width="73"><input type="image" src="image/loginimage4.png" name="login_but" width="73" height="55" id="login_but" /></td>
           <td width="62"><img src="image/loginimage5.png" width="62" height="55" /></td>

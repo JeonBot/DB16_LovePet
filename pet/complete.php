@@ -9,7 +9,7 @@ if($_SESSION['ID']=='')
 }
 include "dbconnect.php";
     $ID = $_SESSION['ID'];
-    $query = "SELECT * FROM COMPLETE WHERE MEMBER_NUM = (SELECT MEMBER_NUM FROM MEMBER WHERE ID='$ID')";
+    $query = "SELECT * FROM COMPLETE WHERE PAY_NUM = (SELECT MAX(PAY_NUM) FROM COMPLETE) AND MEMBER_NUM = (SELECT MEMBER_NUM FROM MEMBER WHERE ID='$ID')";
     $result = mysqli_query($con, $query);
     $row = mysqli_fetch_array($result);
 ?>

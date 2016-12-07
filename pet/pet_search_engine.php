@@ -20,16 +20,6 @@ if($select == 1)
 			$result2 = mysqli_query($con, $query2);
 			$row2 = mysqli_fetch_array($result2);
 
-//			$query7 = "SELECT * FROM BASKET";
-//			$result7 = mysqli_query($con, $query7);
-//			$row7 = mysqli_fetch_array($result7);
-
-//			if ($row7[0] != '')
-//			{
-//				$query6 = "SELECT SPECIES, MEMBER_NUM FROM BASKET WHERE SPECIES ='$row2[2]' AND MEMBER_NUM = (SELECT MEMBER_NUM FROM MEMBER WHERE ID = '$ID')";
-//				$result6 = mysqli_query($con, $query6);
-//				$row6 = mysqli_fetch_array($result6);
-
 			if ($row2[2] != $row6[0])
 			{
 				$query1 = "INSERT INTO BASKET (MEMBER_NUM, SELL_NUM, PRICE, SPECIES) VALUES  ($row[0],'$row2[0]','$row2[1]','$row2[2]')";
@@ -41,13 +31,6 @@ if($select == 1)
 				location.replace('inbasket.php');
 				</script>";
 			}
-//			else
-//			{
-//				echo "<script>
-//				alert('장바구니가 비었습니다.');
-//				location.replace('pet_search.php');
-//				</script>";
-//			}
 
 			else if ($row2[2] == $row6[0])
 			{
@@ -67,6 +50,7 @@ if($select == 1)
 
 	}
 }
+
 else if($select == 2)
 {
 	$query3 = "SELECT MEMBER_NUM FROM MEMBER WHERE ID = '$ID'";

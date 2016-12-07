@@ -16,17 +16,6 @@ if($_SESSION['ID']==''){
 </head>
 
 <body>
-<script>
-function checkForm(theForm){
-	if(theForm.NICKNAME.value=="" || theForm.ADDRESS.value=="" || theForm.PASSWARD.value=="" || theForm.PHONE.value=="" || theForm.ID.value==""){
-		alert("빈칸이 있습니다. 모두 채워주세요.");
-		theForm.ID.focus();
-		return false;
-	}else {
-		return true;
-	}
-}
-</script>
 <?php
  include "dbconnect.php";
 ?>
@@ -68,8 +57,6 @@ function checkForm(theForm){
     <td height="60" align="center"><a href="mypage.php"><img src="image/mem_info_c.png" width="212" height="60" border="0"/></a></td>
     <td align="center"><a href="pet_search.php"><img src="image/pet_search.png" width="212" height="60" border="0"/></a></td>
     <td align="center"><a href="inbasket.php"><img src="image/inbasket.png" width="212" height="60" border="0"/></a></td>
-<!--    <td align="center"><img src="image/payment.png" width="212" height="60" border="0"/></a></td>-->
-<!--    <td colspan="2" align="center"><a href="del_sugang.php"><img src="image/del_select.png" width="212" height="60" border="0"/></a></td>-->
   </tr>
   <tr>
     <td height="3195" colspan="6" align="center" valign="top">

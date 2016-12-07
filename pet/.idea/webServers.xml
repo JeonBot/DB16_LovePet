@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="afabd4f6-0f19-4dcd-9636-3375336b1db9" name="jeonbot" url="http://121.169.63.216/jeonbot/pet">
+        <fileTransfer host="121.169.63.216" port="22" rootFolder="/home/jeonbot/www" accessType="SFTP" password="dfc6dfc5dfdcdfcfdfdadfcfdfdedf9bdf9c" username="jeonbot">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -118,9 +118,6 @@
             <tr>
                 <td height="60" align="center"><a href="mypage.php"><img src="image/mem_info.png" width="212" height="60" border="0"/></a></td>
                 <td align="center"><a href="pet_search.php"><img src="image/pet_search_c.png" width="212" height="60" border="0"/></a></td>
-<!--                <td align="center"><a href="inbasket.php"><img src="image/inbasket.png" width="212" height="60" border="0"/></a></td>-->
-<!--                <td align="center"><img src="image/payment.png" width="212" height="60" border="0"/></a></td>-->
-<!--                <td colspan="2" align="center"><a href="del_sugang.php"><img src="image/del_select.png" width="212" height="60" border="0"/></a></td>-->
             </tr>
             <tr>
                 <td height="3195" colspan="6" align="center" valign="top">
