@@ -118,6 +118,15 @@
             <tr>
                 <td height="60" align="center"><a href="mypage.php"><img src="image/mem_info.png" width="212" height="60" border="0"/></a></td>
                 <td align="center"><a href="pet_search.php"><img src="image/pet_search_c.png" width="212" height="60" border="0"/></a></td>
+                <br>
+            </tr>
+            <tr>
+                <form id="pet_pic_form" name="pet_pic_form" method="post" action="pic_search_engine.php" onsubmit="return true;">
+                    <td align="center">어떤 동물을 보고싶나요? :</td>
+                    <td align="center">&nbsp;&nbsp;
+                        <input id="ps" name="pic_search" type="text" value="" size="20" /></td>
+                    <td colspan="2" align="left"><input type="submit" value="검색"/></td>
+                    </form>
             </tr>
             <tr>
                 <td height="3195" colspan="6" align="center" valign="top">
